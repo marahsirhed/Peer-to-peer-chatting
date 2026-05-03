@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.networks1project.controller.ArchiveController">
+
+    <children>
+        <!-- Title Label -->
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="210.0" text="Archived Messages:" textFill="#b10701">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+
+        <!-- Archived Messages List -->
+        <ListView fx:id="archiveList" layoutX="14.0" layoutY="77.0" prefHeight="200.0" prefWidth="376.0" />
+
+        <!-- Restore Button -->
+        <Button fx:id="restoreButton" layoutX="14.0" layoutY="299.0" mnemonicParsing="false" onAction="#restoreArchivedMessage" prefHeight="26.0" prefWidth="131.0" text="Restore" textFill="#f40707" />
+
+        <!-- Close Button -->
+        <Button fx:id="closeButton" layoutX="243.0" layoutY="299.0" mnemonicParsing="false" onAction="#closeArchiveWindow" prefHeight="26.0" prefWidth="146.0" text="close" />
+      <Label layoutX="14.0" layoutY="44.0" prefHeight="26.0" prefWidth="269.0" text="Messages will be removed after 2 minutes !" textFill="#330101">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.networks1project.controller.ServerGUIController">
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: #2c3e50; -fx-border-color: #1f2c38; -fx-border-width: 0 0 1 0;">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            <Label text="P2P Chat Server" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="24" />
+                </font>
+            </Label>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="15" style="-fx-padding: 15;">
+            <!-- Server Controls Section -->
+            <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: #f5f5f5; -fx-padding: 15; -fx-border-radius: 5; -fx-background-radius: 5;">
+                <Label text="Server Port:" style="-fx-font-weight: bold;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="portField" prefWidth="100" text="1234" />
+                <Button fx:id="startButton" onAction="#handleStartServer" prefWidth="120" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Start Server" />
+                <Button fx:id="stopButton" onAction="#handleStopServer" prefWidth="120" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold;" text="Stop Server" />
+                <Separator orientation="VERTICAL" />
+                <Label fx:id="serverstartedlabel" style="-fx-text-fill: #4CAF50; -fx-font-weight: bold;" text="Server offline" visible="true" />
+                <Separator orientation="VERTICAL" />
+                <Label fx:id="upTimeLabel" style="-fx-font-weight: bold;" text="Up Time: 00:00:00" />
+            </HBox>
+
+            <!-- Server Status & Connected Clients -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label fx:id="statusLabel" style="-fx-font-style: italic;" text="Server status: Offline">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Separator orientation="VERTICAL" />
+                <Label fx:id="connectedClientsLabel" style="-fx-font-weight: bold;" text="Connected Clients: 0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </HBox>
+
+            <HBox spacing="15" VBox.vgrow="ALWAYS">
+                <!-- Online Users Panel -->
+                <VBox spacing="10" HBox.hgrow="ALWAYS" style="-fx-border-color: #ddd; -fx-border-radius: 5; -fx-padding: 10; -fx-background-color: white; -fx-background-radius: 5;" prefWidth="250.0">
+                    <Label style="-fx-font-weight: bold;" text="Online Users">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </Label>
+                    <ListView fx:id="onlineUsersListView" VBox.vgrow="ALWAYS" />
+                </VBox>
+
+                <!-- Server Log Panel -->
+                <VBox spacing="10" HBox.hgrow="ALWAYS" style="-fx-border-color: #ddd; -fx-border-radius: 5; -fx-padding: 10; -fx-background-color: white; -fx-background-radius: 5;" prefWidth="250.0">
+                    <Label style="-fx-font-weight: bold;" text="Server Log">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </Label>
+                    <TextArea fx:id="serverLogArea" VBox.vgrow="ALWAYS" wrapText="true" style="-fx-font-family: monospace;" />
+                </VBox>
+
+                <!-- User Management Panel -->
+                <VBox spacing="10" HBox.hgrow="ALWAYS" style="-fx-border-color: #ddd; -fx-border-radius: 5; -fx-padding: 10; -fx-background-color: white; -fx-background-radius: 5;" prefWidth="250.0">
+                    <Label style="-fx-font-weight: bold;" text="User Management">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </Label>
+
+                    <HBox spacing="5" alignment="CENTER_LEFT">
+                        <Label text="Username:" />
+                        <TextField fx:id="newUsernameField" HBox.hgrow="ALWAYS" />
+                    </HBox>
+
+                    <HBox spacing="5" alignment="CENTER_LEFT">
+                        <Label text="Password:" />
+                        <TextField fx:id="newPasswordField" HBox.hgrow="ALWAYS" />
+                    </HBox>
+
+                    <Button fx:id="addUserButton" onAction="#handleAddUser" text="Add User"
+                            style="-fx-background-color: #4CAF50; -fx-text-fill: white;"
+                            maxWidth="Infinity" />
+
+                    <Separator />
+
+                    <Label text="Registered Users:">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <ListView fx:id="userListView" VBox.vgrow="ALWAYS" />
+                    <Button fx:id="deleteUserButton" onAction="#handleDeleteUser" text="Delete Selected User"
+                            style="-fx-background-color: #f44336; -fx-text-fill: white;"
+                            maxWidth="Infinity" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #ecf0f1; -fx-padding: 10;">
+            <Label text="P2P Chat Server • Version 1.0">
+                <font>
+                    <Font style="italic" size="12.0" />
+                </font>
+            </Label>
+        </HBox>
+    </bottom>
+</BorderPane>

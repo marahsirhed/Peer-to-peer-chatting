@@ -1,0 +1,318 @@
+/* dark-theme.css */
+
+/* Base styling */
+.root {
+    -fx-background-color: #1E2329;
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Text fields and areas */
+.text-field, .text-area {
+    -fx-background-color: #282C34;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #3E4452;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-highlight-fill: #0A84FF;
+    -fx-highlight-text-fill: white;
+    -fx-prompt-text-fill: #AAAAAA;
+}
+
+.text-area .content {
+    -fx-background-color: #282C34;
+}
+
+/* Buttons styling */
+.button {
+    -fx-background-color: #3E4452;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-padding: 8 16;
+}
+
+.button:hover {
+    -fx-background-color: #4C5363;
+}
+
+/* Action buttons */
+#sendButton, #connectToServerButton, #StartButton, #loginButton, .success-button {
+    -fx-background-color: #0A84FF;
+}
+
+#sendButton:hover, #connectToServerButton:hover, #StartButton:hover, #loginButton:hover, .success-button:hover {
+    -fx-background-color: #3A9EFF;
+}
+
+#disconnectButton, #logoutButton, #deleteAllButton, #deleteButton, .danger-button {
+    -fx-background-color: #FF453A;
+}
+
+#disconnectButton:hover, #logoutButton:hover, #deleteAllButton:hover, #deleteButton:hover, .danger-button:hover {
+    -fx-background-color: #FF6961;
+}
+
+.neutral-button {
+    -fx-background-color: #5A6377;
+}
+
+.neutral-button:hover {
+    -fx-background-color: #6A7387;
+}
+
+/* List views */
+.list-view {
+    -fx-background-color: #282C34;
+    -fx-background-radius: 6px;
+    -fx-border-color: #3E4452;
+    -fx-border-radius: 6px;
+    -fx-padding: 5;
+}
+
+.list-cell {
+    -fx-background-color: #282C34;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 8 12;
+    -fx-border-color: transparent transparent #3E4452 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #0A84FF;
+    -fx-text-fill: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #3E4452;
+}
+
+/* Tab styling */
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #1E2329;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #282C34;
+    -fx-background-radius: 4 4 0 0;
+    -fx-padding: 8 15;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #0A84FF;
+}
+
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.tab-pane .tab-content-area {
+    -fx-background-color: #1E2329;
+}
+
+/* Labels - Improved visibility */
+.label {
+    -fx-text-fill: #CCCCCC;
+}
+
+.label-bright {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.label-hint {
+    -fx-text-fill: #AAAAAA;
+    -fx-font-style: italic;
+}
+
+.label-info {
+    -fx-text-fill: #0A84FF;
+    -fx-font-weight: bold;
+}
+
+.title-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.section-header {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Status labels */
+.status-info {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.status-success {
+    -fx-text-fill: #32D74B;
+    -fx-font-weight: bold;
+}
+
+.status-error {
+    -fx-text-fill: #FF453A;
+    -fx-font-weight: bold;
+}
+
+.status-warning {
+    -fx-text-fill: #FF9F0A;
+    -fx-font-weight: bold;
+}
+
+/* Top bar styling */
+.top-bar {
+    -fx-background-color: linear-gradient(to right, #1A1D21, #282C34);
+    -fx-border-color: #0A84FF;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10;
+}
+
+.bottom-bar {
+    -fx-background-color: #1A1D21;
+    -fx-border-color: #3E4452;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 8 15;
+}
+
+/* Chat messages */
+.chat-you {
+    -fx-text-fill: #0A84FF;
+    -fx-font-weight: bold;
+}
+
+.chat-remote {
+    -fx-text-fill: #FF9F0A;
+    -fx-font-weight: bold;
+}
+
+.chat-broadcast {
+    -fx-text-fill: #32D74B;
+    -fx-font-weight: bold;
+}
+
+/* Separator */
+.separator {
+    -fx-background-color: #3E4452;
+}
+
+.separator .line {
+    -fx-border-color: #3E4452;
+    -fx-border-width: 1;
+}
+
+.section-divider {
+    -fx-padding: 5 0;
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-background-color: #282C34;
+    -fx-border-color: #3E4452;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #282C34;
+}
+
+.combo-box .combo-box-popup .list-view {
+    -fx-background-color: #282C34;
+    -fx-border-color: #3E4452;
+}
+
+.combo-box .combo-box-popup .list-cell:hover {
+    -fx-background-color: #3E4452;
+}
+
+.combo-box .combo-box-popup .list-cell:selected {
+    -fx-background-color: #0A84FF;
+}
+
+/* CheckBox styling */
+.check-box {
+    -fx-text-fill: #CCCCCC;
+}
+
+.check-box-bright {
+    -fx-text-fill: #FFFFFF;
+}
+
+.check-box .box {
+    -fx-background-color: #282C34;
+    -fx-border-color: #3E4452;
+    -fx-border-radius: 3px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #0A84FF;
+}
+
+/* Progress bar */
+.progress-bar > .track {
+    -fx-background-color: #282C34;
+    -fx-background-radius: 4;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: #32D74B;
+    -fx-background-radius: 4;
+}
+
+/* Scroll bar styling */
+.scroll-bar {
+    -fx-background-color: #1E2329;
+    -fx-background-radius: 2;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #3E4452;
+    -fx-background-radius: 2;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #4C5363;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+/* Main sections styling */
+.main-content {
+    -fx-padding: 15;
+    -fx-spacing: 15;
+}
+
+.app-section {
+    -fx-background-color: #282C34;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #3E4452;
+    -fx-padding: 15;
+}
+
+/* Archive tab specific */
+.archive-message {
+    -fx-text-fill: #FF9F0A;
+}
+
+.archive-timer {
+    -fx-text-fill: #AAAAAA;
+    -fx-font-size: 11px;
+}
